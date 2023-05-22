@@ -21,17 +21,24 @@ export class EditStudentComponent implements OnInit {
       console.log(
         'This is the editStudent in edit student component ' + data.id
       );
-      this.editStudent = { name: data.name, age: data.age, id: data.id };
+      this.editStudent = {
+        id: data.id,
+        studentID: data.studentID,
+        name: data.name,
+        age: data.age,
+      };
       // console.log(this.editStudent);
     });
   }
 
   onSubmit(newStudent: { sName: string; sAge: string }) {
     console.log(newStudent);
+    console.log(newStudent.sAge);
     const student: Student = {
       name: newStudent.sName,
       age: Number(newStudent.sAge),
       id: this.editStudent.id,
+      studentID: this.editStudent.studentID,
     };
     console.log('The new value of student name is ' + student.name);
     this.stdService

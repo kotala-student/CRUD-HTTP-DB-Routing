@@ -1,5 +1,6 @@
 export interface Student {
-  id?: string;
+  id?: string; // this id is store the unique identifier that firebase generates
+  studentID: number;
   name: string;
   age: number;
 }

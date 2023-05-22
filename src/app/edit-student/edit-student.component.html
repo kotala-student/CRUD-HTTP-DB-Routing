@@ -3,11 +3,11 @@
   <div class="card">
     <div class="card-body">
       <form #editForm="ngForm">
+        <p>Current Student Name: {{ editStudent.name }}</p>
         <p>
           <input class="form-control" type="text" name="sName" ngModel />
         </p>
-        <p>{{ editStudent.name }}</p>
-
+        <p>Current Student Age: {{ editStudent.age }}</p>
         <p>
           <input class="form-control" type="text" name="sAge" ngModel />
         </p>

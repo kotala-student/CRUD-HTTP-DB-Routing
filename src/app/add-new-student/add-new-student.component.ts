@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-new-student.component.css'],
 })
 export class AddNewStudentComponent implements OnInit {
-
-
   constructor(private stdService: StudentService, private router: Router) {}
 
   ngOnInit() {
@@ -20,6 +18,7 @@ export class AddNewStudentComponent implements OnInit {
   onSubmit(newStudent: { sName: string; sAge: string }) {
     console.log(newStudent);
     const student: Student = {
+      studentID: this.stdService.getNextID(),
       name: newStudent.sName,
       age: Number(newStudent.sAge),
     };
