@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <button class="btn btn-danger" (click)="onClearData()">
+        Clear the List
+      </button>
+    </div>
+  </div>
+  <hr />
+  <h3>Student List</h3>
+
+  <div class="card" *ngFor="let student of studentList">
+    <div class="card-header">
+      <h4>{{ student.name }}</h4>
+    </div>
+    <div class="card-body">
+      <h5>ID: {{ student.id }}</h5>
+      <h5>Age: {{ student.age }}</h5>
+      <button class="btn btn-danger" (click)="onDeleteStudent(student.id)">
+        Delete
+      </button>
+      <button class="btn btn-primary" (click)="onUpdateStudent(student.id)">
+        Edit
+      </button>
+    </div>
+  </div>
+</div>

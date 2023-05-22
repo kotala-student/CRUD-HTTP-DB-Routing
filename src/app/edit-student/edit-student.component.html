@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Edit Student</h1>
+  <div class="card">
+    <div class="card-body">
+      <form #editForm="ngForm">
+        <p>
+          <input class="form-control" type="text" name="sName" ngModel />
+        </p>
+        <p>{{ editStudent.name }}</p>
+
+        <p>
+          <input class="form-control" type="text" name="sAge" ngModel />
+        </p>
+        <p>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            routerLink="/student-list"
+            (click)="onSubmit(editForm.value)"
+          >
+            Update Student
+          </button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
