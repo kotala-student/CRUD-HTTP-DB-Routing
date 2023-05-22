@@ -5,11 +5,23 @@
       <form #editForm="ngForm">
         <p>Current Student Name: {{ editStudent.name }}</p>
         <p>
-          <input class="form-control" type="text" name="sName" ngModel />
+          <input
+            class="form-control"
+            type="text"
+            name="sName"
+            placeholder="{{ editStudent.name }}"
+            ngModel
+          />
         </p>
         <p>Current Student Age: {{ editStudent.age }}</p>
         <p>
-          <input class="form-control" type="text" name="sAge" ngModel />
+          <input
+            class="form-control"
+            type="text"
+            name="sAge"
+            placeholder="{{ editStudent.age }}"
+            ngModel
+          />
         </p>
         <p>
           <button
